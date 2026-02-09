@@ -1,59 +1,16 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { TBLogo } from '../constants';
-import { GoogleGenAI } from "@google/genai";
 
 const Hero: React.FC = () => {
-  const [heroImage, setHeroImage] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const generateHero = async () => {
-      try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-        const response = await ai.models.generateContent({
-          model: 'gemini-2.5-flash-image',
-          contents: {
-            parts: [{ 
-              text: "Hyper-realistic close-up of athletic legs in motion, running through a vibrant urban city street. Cinematic golden hour lighting, warm glow, artistic motion blur to convey high speed and energy, premium running shoes hitting the pavement, high-contrast urban textures, 8k resolution, professional sports photography, high-energy atmosphere." 
-            }],
-          },
-          config: {
-            imageConfig: {
-              aspectRatio: "16:9"
-            }
-          }
-        });
-
-        const part = response.candidates?.[0]?.content?.parts.find(p => p.inlineData);
-        if (part?.inlineData) {
-          setHeroImage(`data:image/png;base64,${part.inlineData.data}`);
-        }
-      } catch (err) {
-        console.error("Hero generation failed", err);
-        setHeroImage("https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&q=80&w=2000");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    generateHero();
-  }, []);
-
   return (
     <section className="relative h-screen flex flex-col justify-end bg-black overflow-hidden group">
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {loading ? (
-          <div className="w-full h-full bg-zinc-900 animate-pulse flex items-center justify-center">
-            <div className="text-white/20 font-mono text-xs tracking-[0.5em] uppercase">Visualizing Momentum...</div>
-          </div>
-        ) : (
-          <img 
-            src={heroImage || ""} 
-            alt="Trailblazers Community"
-            className="w-full h-full object-cover opacity-70 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-[2500ms] ease-out"
-          />
-        )}
+        <img
+          src="/images/hero-runner.png"
+          alt="Trailblazers Community"
+          className="w-full h-full object-cover opacity-70 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-[2500ms] ease-out"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60" />
       </div>
 
