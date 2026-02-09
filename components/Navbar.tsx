@@ -11,9 +11,9 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToRegistration = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
-    const element = document.getElementById('registration');
+    const element = document.getElementById(sectionId);
     if (element) {
       const offset = 100; // Offset for fixed navbar
       const elementPosition = element.getBoundingClientRect().top;
@@ -33,14 +33,23 @@ const Navbar: React.FC = () => {
           <TBLogo className="w-20 h-20 text-white group-hover:scale-110 transition-transform duration-300" />
           <span className="font-black text-xl tracking-tighter uppercase hidden sm:block">Trailblazers</span>
         </a>
-        
-        <a 
-          href="#registration" 
-          onClick={scrollToRegistration}
-          className="bg-white text-black px-8 py-3 text-xs font-black uppercase tracking-[0.2em] hover:bg-[#ff0080] hover:text-white transition-all duration-300 inline-block shadow-xl"
-        >
-          Join Club
-        </a>
+
+        <div className="flex items-center gap-4">
+          <a
+            href="#socials"
+            onClick={(e) => scrollToSection(e, 'socials')}
+            className="border border-white/20 text-white px-8 py-3 text-xs font-black uppercase tracking-[0.2em] hover:border-[#8000ff] hover:text-[#8000ff] transition-all duration-300 inline-block"
+          >
+            Socials
+          </a>
+          <a
+            href="#registration"
+            onClick={(e) => scrollToSection(e, 'registration')}
+            className="bg-white text-black px-8 py-3 text-xs font-black uppercase tracking-[0.2em] hover:bg-[#ff0080] hover:text-white transition-all duration-300 inline-block shadow-xl"
+          >
+            Join Club
+          </a>
+        </div>
       </div>
     </nav>
   );

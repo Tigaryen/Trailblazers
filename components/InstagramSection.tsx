@@ -6,7 +6,7 @@ const InstagramSection: React.FC = () => {
   const INSTAGRAM_URL = "https://www.instagram.com/trailblazersc/";
 
   return (
-    <section className="bg-black py-40 md:py-64 relative overflow-hidden group border-t border-white/5">
+    <section id="socials" className="bg-black py-40 md:py-64 relative overflow-hidden group border-t border-white/5">
       {/* Background Animated Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-1000">
         <span className="text-[35vw] font-black uppercase whitespace-nowrap animate-pulse">TRAILBLAZERS</span>
