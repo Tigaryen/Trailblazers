@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="4" fill="#0a0a0a"/>
+  <text x="16" y="22" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="14" fill="white">TB</text>
+  <path d="M16 4l-2 4h3l-1 4 4-5h-3l1-3z" fill="url(#g)"/>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ff0080"/><stop offset="100%" stop-color="#ff8c00"/></linearGradient></defs>
+</svg>

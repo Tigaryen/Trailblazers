@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
               A friendly & fun community of founders, creatives and thinkers coming together to connect meaningfully, grow intentionally and give back purposefully.
             </p>
             <div className="flex items-center gap-4 text-xs font-mono text-white/40">
-              <span className="hover:text-white transition-colors cursor-crosshair hover:scale-105 transition-transform">53.4808° N, 2.2426° W</span>
+              <span className="hover:text-white cursor-crosshair hover:scale-105 transition-all">53.4808° N, 2.2426° W</span>
               <span className="tb-gradient w-2 h-2 rounded-full animate-ping shadow-[0_0_15px_#ff0080]" />
             </div>
           </div>

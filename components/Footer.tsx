@@ -45,11 +45,7 @@ const Footer: React.FC = () => {
              <span>53.4808° N, 2.2426° W</span>
              <span>Manchester, UK</span>
           </div>
-          <div>Copyright 2025 Trailblazers Sweatworking Club</div>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-          </div>
+          <div>&copy; {new Date().getFullYear()} Trailblazers Sweatworking Club</div>
         </div>
       </div>
     </footer>

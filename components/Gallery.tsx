@@ -21,20 +21,23 @@ const Gallery: React.FC = () => {
     const generateGalleryImages = async () => {
       try {
         const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-        const generatedImages: string[] = [];
 
-        for (const prompt of PROMPTS) {
-          const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash-image',
-            contents: { parts: [{ text: prompt }] },
-            config: { imageConfig: { aspectRatio: "3:4" } }
-          });
+        const results = await Promise.all(
+          PROMPTS.map(prompt =>
+            ai.models.generateContent({
+              model: 'gemini-2.5-flash-image',
+              contents: { parts: [{ text: prompt }] },
+              config: { imageConfig: { aspectRatio: "3:4" } }
+            })
+          )
+        );
 
-          const part = response.candidates?.[0]?.content?.parts.find(p => p.inlineData);
-          if (part?.inlineData) {
-            generatedImages.push(`data:image/png;base64,${part.inlineData.data}`);
-          }
-        }
+        const generatedImages = results
+          .map(response => {
+            const part = response.candidates?.[0]?.content?.parts.find(p => p.inlineData);
+            return part?.inlineData ? `data:image/png;base64,${part.inlineData.data}` : null;
+          })
+          .filter((img): img is string => img !== null);
 
         if (generatedImages.length < 3) throw new Error("Missing images");
         setImages(generatedImages);

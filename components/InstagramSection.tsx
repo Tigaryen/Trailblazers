@@ -38,8 +38,8 @@ const InstagramSection: React.FC = () => {
       </div>
       
       {/* Kinetic Stripes */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff0080] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 translate-y-20 group-hover:translate-y-0 transition-transform" />
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#8000ff] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -translate-y-20 group-hover:translate-y-0 transition-transform" />
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#ff0080] to-transparent opacity-0 group-hover:opacity-100 translate-y-20 group-hover:translate-y-0 transition-all duration-1000" />
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#8000ff] to-transparent opacity-0 group-hover:opacity-100 -translate-y-20 group-hover:translate-y-0 transition-all duration-1000" />
     </section>
   );
 };
