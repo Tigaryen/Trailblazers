@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
               <span className="w-12 h-[1px] bg-[#ff0080] group-hover:w-24 transition-all duration-700" />
               <span className="hover:text-[#8000ff] transition-colors duration-300">[ Est. 2025 ]</span>
             </div>
-            <h1 className="text-[14vw] md:text-[12vw] font-black leading-[0.8] tracking-tighter uppercase mb-4 transition-colors duration-500 hover:text-[#ff0080] cursor-default select-none">
+            <h1 className="text-[11vw] md:text-[9vw] font-black leading-[0.8] tracking-tighter uppercase mb-4 transition-colors duration-500 hover:text-[#ff0080] cursor-default select-none">
               Trail<br />blazers
             </h1>
           </div>
