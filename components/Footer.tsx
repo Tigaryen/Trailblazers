@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
           <div className="md:col-span-5">
             <div className="flex items-center gap-4 mb-8">
-               <TBLogo className="w-20 h-20 text-white" />
+               <TBLogo className="w-40 h-40 text-white" />
                <div className="flex flex-col">
                   <span className="text-4xl font-black uppercase tracking-tighter leading-none">Trail</span>
                   <span className="text-4xl font-black uppercase tracking-tighter leading-none">blazers</span>

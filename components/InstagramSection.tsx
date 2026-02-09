@@ -32,7 +32,7 @@ const InstagramSection: React.FC = () => {
 
           <div className="mt-16 relative w-24 h-24 flex items-center justify-center">
             <div className="absolute inset-0 border border-white/10 rounded-full group-hover/handle:border-[#8000ff] group-hover/handle:scale-150 group-hover/handle:opacity-0 transition-all duration-1000" />
-            <TBLogo className="w-16 h-16 text-white/20 group-hover/handle:text-white group-hover/handle:rotate-[360deg] transition-all duration-1000" />
+            <TBLogo className="w-32 h-32 text-white/20 group-hover/handle:text-white group-hover/handle:rotate-[360deg] transition-all duration-1000" />
           </div>
         </a>
       </div>

@@ -73,7 +73,7 @@ const Events: React.FC = () => {
           <div key={index} className="group relative bg-black p-8 md:p-10 flex flex-col min-h-[400px] overflow-hidden">
             {/* Background Motif */}
             <div className="absolute -right-4 -bottom-4 opacity-[0.03] group-hover:opacity-10 group-hover:scale-110 transition-all duration-700 pointer-events-none">
-               <TBLogo className="w-64 h-64 text-white" />
+               <TBLogo className="w-[512px] h-[512px] text-white" />
             </div>
 
             <div className="relative z-10 flex flex-col h-full">

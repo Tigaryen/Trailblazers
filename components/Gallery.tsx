@@ -108,7 +108,7 @@ const Gallery: React.FC = () => {
           </h3>
           <div className="mt-16 flex items-center gap-12">
              <div className="w-24 h-[1px] bg-white/10 group-hover:w-48 group-hover:bg-[#ff0080] transition-all duration-1000" />
-             <TBLogo className="w-16 h-16 text-white/20 group-hover:text-white group-hover:rotate-[360deg] transition-all duration-1000" />
+             <TBLogo className="w-32 h-32 text-white/20 group-hover:text-white group-hover:rotate-[360deg] transition-all duration-1000" />
              <div className="w-24 h-[1px] bg-white/10 group-hover:w-48 group-hover:bg-[#8000ff] transition-all duration-1000" />
           </div>
         </a>

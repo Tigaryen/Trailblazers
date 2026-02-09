@@ -9,7 +9,7 @@ export const BRAND_COLORS = {
   white: '#ffffff',
 };
 
-export const TBLogo = ({ className = "w-16 h-16" }: { className?: string }) => (
+export const TBLogo = ({ className = "w-32 h-32" }: { className?: string }) => (
   <img
     src="/images/tb-logo-white.png"
     alt="Trailblazers Logo"

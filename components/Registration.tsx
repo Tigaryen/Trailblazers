@@ -123,7 +123,7 @@ const Registration: React.FC = () => {
           </div>
 
           <div className="absolute -left-20 -bottom-20 opacity-[0.02] group-hover:opacity-[0.05] transition-opacity duration-1000 pointer-events-none">
-             <TBLogo className="w-[650px] h-[650px]" />
+             <TBLogo className="w-[1300px] h-[1300px]" />
           </div>
         </div>
 
